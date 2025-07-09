@@ -1,0 +1,101 @@
+@import './base.css';
+
+
+/* -- 1. 离线字体 -- */
+/* orbitron-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/orbitron-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* orbitron-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/orbitron-v34-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/roboto-v48-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/roboto-v48-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+/* -- 2. 定义全局 CSS 变量 (Color Palette & Fonts) -- */
+:root {
+  --font-primary: 'Roboto', sans-serif;
+  --font-display: 'Orbitron', sans-serif; /* 科技感标题字体 */
+
+  --color-background: #0D1117; /* 更深的背景色，类似 GitHub Dark */
+  --color-background-soft: #161B22; /* 稍亮的背景，用于卡片 */
+  --color-border: rgba(139, 148, 158, 0.3); /* 半透明边框 */
+
+  --color-text-primary: #E6EDF3; /* 主文本颜色 */
+  --color-text-secondary: #8B949E; /* 次要文本颜色 */
+
+  --color-accent-primary: #58A6FF; /* 主题色从绿色改为科技蓝 */
+  --color-accent-secondary: #3FB950; /* 保留绿色作为次要点缀 */
+  --color-accent-danger: #F85149; /* 危险/警告色 */
+}
+
+
+/* -- 3. 应用基础样式 -- */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  margin: 0;
+  overflow-x: hidden; /* 防止意外的水平滚动 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display); /* 所有标题使用科技感字体 */
+}
+
+/* 适用于 Chrome, Edge, Safari 等 Webkit 内核浏览器 */
+::-webkit-scrollbar {
+  width: 8px; /* 滚动条宽度 */
+  height: 8px; /* 水平滚动条高度 */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* 滚动条轨道颜色 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* 滚动条滑块颜色 */
+  border-radius: 4px;
+  border: 2px solid #1a1a1a; /* 创建一个围绕滑块的边框效果，使其看起来更细 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777; /* 鼠标悬停时滑块的颜色 */
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent; /* 右下角交汇处的背景色 */
+}
+
+/* 适用于 Firefox */
+/* 注意：Firefox 的自定义能力较弱，只能改变颜色和宽度 */
+html {
+  scrollbar-width: thin; /* thin, auto, or none */
+  scrollbar-color: #555 #1a1a1a; /* 滑块颜色 轨道颜色 */
+}
