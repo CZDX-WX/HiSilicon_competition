@@ -43,12 +43,8 @@
 
 系统硬件由**Taurus开发板**（主控芯片Hi3516DV300）和我们自己设计的**WS63舵机控制板**组成。Hi3516DV300负责视频采集、AI推理和主要的通信功能；WS63核心板则通过UART接收指令，控制双轴舵机进行人体跟踪。
 
-| Taurus开发板 | WS63舵机控制板PCB |
-
 <img width="810" height="440" alt="image" src="https://github.com/user-attachments/assets/8b21b106-43d2-4529-bd8d-7e7eaae8978f" />
 <img width="881" height="363" alt="image" src="https://github.com/user-attachments/assets/c38a3e5e-3462-4f9a-a251-e8b9b951fc1f" />
-
-**整体硬件实物图**
 <img width="827" height="594" alt="image" src="https://github.com/user-attachments/assets/9b9cbbd8-cca3-49df-bcea-2c646acb9edc" />
 <img width="881" height="524" alt="image" src="https://github.com/user-attachments/assets/901c808b-a448-47b0-8590-2b15afaec6a0" />
 
