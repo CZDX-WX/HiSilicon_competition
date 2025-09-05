@@ -15,13 +15,15 @@
 
 ## **📸 应用截图**
 
-| 等待用户进入画面 | 姿态校准完成 |
-| :---- | :---- |
-|  |  |
-| **深蹲训练中** | **深蹲训练后分析报告** |
-|  |  |
-| **开合跳训练中** | **训练历史记录** |
-|  |  |
+
+<img width="849" height="530" alt="image" src="https://github.com/user-attachments/assets/559a14e5-c009-403a-b2ec-3ce3d8a30a9b" />
+<img width="858" height="538" alt="image" src="https://github.com/user-attachments/assets/51b226a8-cf70-49e4-9434-55cac868574b" />
+<img width="859" height="545" alt="image" src="https://github.com/user-attachments/assets/54ee958d-01cf-4b50-83a5-ae3acca63c8f" />
+<img width="861" height="536" alt="image" src="https://github.com/user-attachments/assets/7c8b79d5-743a-440d-8488-84f2d0d6bc49" />
+<img width="864" height="540" alt="image" src="https://github.com/user-attachments/assets/feb4e651-0cc1-4a14-b9e7-f28cd4e29105" />
+<img width="866" height="541" alt="image" src="https://github.com/user-attachments/assets/d9935db4-0432-4f2d-b8fd-79454bc9b52c" />
+<img width="857" height="546" alt="image" src="https://github.com/user-attachments/assets/4c612e82-b1de-4e2a-a12c-37b91158e59c" />
+
 
 ## **🚀 主要技术特点**
 
@@ -31,20 +33,25 @@
 4. **轻量化实时数据通信机制**：前后端通过WebSocket建立持久连接。我们设计的通信协议以轻量化为核心，后端仅广播推理出的结构化坐标数据，相较于传输原始视频流，数据传输量降低了超过99%，极大提升了系统的实时性和响应速度。
 
 ## **🛠️ 系统架构**
-
+<img width="865" height="624" alt="image" src="https://github.com/user-attachments/assets/6791d8b0-47db-495f-b927-277de271e89c" />
 ### **整体架构**
 
 系统主要分为 **端侧设备 (海思平台)** 和 **应用侧 (浏览器/PC)** 两大部分。端侧负责完成所有的AI计算，并将结果（骨骼点JSON数据）通过WebSocket发送给应用侧；应用侧负责业务逻辑处理、数据可视化、用户交互和反向控制指令的发送。
 
 ### **硬件系统**
+<img width="864" height="535" alt="image" src="https://github.com/user-attachments/assets/0a6d986a-4a3d-4b23-a658-4dad0a96c235" />
 
 系统硬件由**Taurus开发板**（主控芯片Hi3516DV300）和我们自己设计的**WS63舵机控制板**组成。Hi3516DV300负责视频采集、AI推理和主要的通信功能；WS63核心板则通过UART接收指令，控制双轴舵机进行人体跟踪。
 
 | Taurus开发板 | WS63舵机控制板PCB |
-| :---- | :---- |
-|  |  |
-| **整体硬件实物图** |  |
-|  |  |
+
+<img width="810" height="440" alt="image" src="https://github.com/user-attachments/assets/8b21b106-43d2-4529-bd8d-7e7eaae8978f" />
+<img width="881" height="363" alt="image" src="https://github.com/user-attachments/assets/c38a3e5e-3462-4f9a-a251-e8b9b951fc1f" />
+
+**整体硬件实物图**
+<img width="827" height="594" alt="image" src="https://github.com/user-attachments/assets/9b9cbbd8-cca3-49df-bcea-2c646acb9edc" />
+<img width="881" height="524" alt="image" src="https://github.com/user-attachments/assets/901c808b-a448-47b0-8590-2b15afaec6a0" />
+
 
 ### **软件系统**
 
@@ -64,6 +71,8 @@
 | 动作纠错响应时间 | \< 300ms |
 | 关键点检测精度 | \> 98% |
 | 内存占用 | \< 500MB |
+
+<img width="639" height="588" alt="image" src="https://github.com/user-attachments/assets/16c8474f-6c8f-40ca-bd78-04776168765f" />
 
 ## **💡 主要创新点**
 
